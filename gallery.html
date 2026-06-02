@@ -1,0 +1,429 @@
+<!doctype html>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Галерея картин MareVirtus</title>
+    <meta
+      content="Каталог морской живописи MareVirtus: поиск, фильтры, карточки картин, цены и добавление в корзину."
+      name="description"
+    />
+    <meta
+      content="каталог картин, морская живопись, маринистика, купить картину, MareVirtus"
+      name="keywords"
+    />
+    <link href="assets/img/logo-anchor.svg" rel="icon" type="image/svg+xml" />
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("marevirtus_theme") || "light";
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a aria-label="MareVirtus: на главную" class="logo" href="index.html"
+          ><img
+            alt="Логотип с морским якорем"
+            src="assets/img/logo-anchor.svg"
+          /><span>MareVirtus<small>Дух моря в каждом мазке</small></span></a
+        ><button aria-expanded="false" class="nav-toggle" type="button">
+          Меню
+        </button>
+        <nav aria-label="Основное меню" class="main-nav">
+          <a href="index.html">Главная</a><a href="about.html">О галерее</a
+          ><a class="active" href="gallery.html">Галерея картин</a
+          ><a href="events.html">Мероприятия</a><a href="news.html">Новости</a
+          ><a href="contacts.html">Контакты</a
+          ><a class="cart-link" href="cart.html"
+            >Корзина <span data-cart-count="">0</span></a
+          >
+        </nav>
+        <button
+          aria-label="Переключить тему"
+          class="theme-toggle"
+          data-theme-toggle=""
+          type="button"
+        >
+          <span class="theme-toggle-text">Тема</span>
+        </button>
+      </div>
+    </header>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Главная</a> / Галерея картин
+        </div>
+        <h1>Галерея картин</h1>
+        <p class="lead">
+          Каталог с поиском, расширенным фильтром по технике и демонстрационной
+          корзиной интернет-магазина.
+        </p>
+      </div>
+    </section>
+    <main id="main">
+      <section class="section">
+        <div class="container">
+          <form aria-label="Фильтры каталога" class="filters">
+            <input
+              id="gallerySearch"
+              placeholder="Поиск по названию, автору или описанию"
+              type="search"
+            />
+            <select id="galleryCategory">
+              <option value="all">Все техники</option>
+              <option value="масло">Масло</option>
+              <option value="акварель">Акварель</option>
+            </select>
+            <select id="gallerySort">
+              <option value="default">Сортировка</option>
+              <option value="price-asc">Цена ↑</option>
+              <option value="price-desc">Цена ↓</option>
+            </select>
+            <a class="btn" href="cart.html"
+              >Корзина <span data-cart-count="">0</span></a
+            >
+          </form>
+          <div class="catalog-grid" id="catalogGrid">
+            <article
+              class="card product-card"
+              data-category="масло"
+              data-price="4900"
+            >
+              <a
+                class="art-frame"
+                href="#"
+                aria-label="Клод Моне — «Лодки на пляже в Этрета»"
+                ><img
+                  alt="Репродукция картины Клода Моне Лодки на пляже в Этрета"
+                  src="assets/img/gallery/1.jpg"
+              /></a>
+              <div class="card-body">
+                <span class="tag">масло</span>
+                <h3>Клод Моне — «Лодки на пляже в Этрета»</h3>
+                <p class="muted">Boats on the Beach at Étretat, 1885</p>
+                <p>
+                  Репродукция на холсте. Спокойный морской берег Нормандии:
+                  лодки на песке, холодное небо и мягкая светлая палитра без
+                  лишней перегруженности.
+                </p>
+                <p class="price">4 900 ₽</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap">
+                  <button
+                    class="btn small"
+                    data-add-to-cart="monet-etretat"
+                    type="button"
+                  >
+                    В корзину</button
+                  ><button
+                    class="btn ghost small"
+                    data-open-modal="monet-etretat"
+                    type="button"
+                  >
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article
+              class="card product-card"
+              data-category="масло"
+              data-price="5200"
+            >
+              <a
+                class="art-frame"
+                href="#"
+                aria-label="Эдуар Мане — «Морской вид, спокойная погода»"
+                ><img
+                  alt="Репродукция картины Эдуара Мане Морской вид спокойная погода"
+                  src="assets/img/gallery/2.jpg"
+              /></a>
+              <div class="card-body">
+                <span class="tag">масло</span>
+                <h3>Эдуар Мане — «Морской вид, спокойная погода»</h3>
+                <p class="muted">Sea View, Calm Weather, 1864–1865</p>
+                <p>
+                  Репродукция на холсте. Лаконичный морской сюжет с пароходом и
+                  парусными судами в Ла-Манше; работа хорошо подходит для
+                  светлого интерьера.
+                </p>
+                <p class="price">5 200 ₽</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap">
+                  <button
+                    class="btn small"
+                    data-add-to-cart="manet-calm-sea"
+                    type="button"
+                  >
+                    В корзину</button
+                  ><button
+                    class="btn ghost small"
+                    data-open-modal="manet-calm-sea"
+                    type="button"
+                  >
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article
+              class="card product-card"
+              data-category="акварель"
+              data-price="3900"
+            >
+              <a
+                class="art-frame"
+                href="#"
+                aria-label="Джон Селл Котман — «Лодки у берега, надвигается шторм»"
+                ><img
+                  alt="Репродукция картины Джона Селла Котмана Лодки у берега надвигается шторм"
+                  src="assets/img/gallery/3.jpg"
+              /></a>
+              <div class="card-body">
+                <span class="tag">акварель</span>
+                <h3>Джон Селл Котман — «Лодки у берега, надвигается шторм»</h3>
+                <p class="muted">
+                  Boats off the coast, storm approaching, 1830
+                </p>
+                <p>
+                  Репродукция акварели. Рыбацкая лодка на волнах, низкие облака
+                  и ощущение приближающейся непогоды создают выразительное
+                  морское настроение.
+                </p>
+                <p class="price">3 900 ₽</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap">
+                  <button
+                    class="btn small"
+                    data-add-to-cart="cotman-storm"
+                    type="button"
+                  >
+                    В корзину</button
+                  ><button
+                    class="btn ghost small"
+                    data-open-modal="cotman-storm"
+                    type="button"
+                  >
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article
+              class="card product-card"
+              data-category="акварель"
+              data-price="4200"
+            >
+              <a
+                class="art-frame"
+                href="#"
+                aria-label="Чарльз Димут — «Бермудское небо и море с лодками»"
+                ><img
+                  alt="Репродукция картины Чарльза Димута Бермудское небо и море с лодками"
+                  src="assets/img/gallery/4.jpg"
+              /></a>
+              <div class="card-body">
+                <span class="tag">акварель</span>
+                <h3>Чарльз Димут — «Бермудское небо и море с лодками»</h3>
+                <p class="muted">Bermuda Sky and Sea with Boats, ок. 1917</p>
+                <p>
+                  Репродукция акварели на бумаге. Небольшая лёгкая композиция с
+                  лодками, прозрачным небом и мягкой курортной атмосферой.
+                </p>
+                <p class="price">4 200 ₽</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap">
+                  <button
+                    class="btn small"
+                    data-add-to-cart="demuth-bermuda"
+                    type="button"
+                  >
+                    В корзину</button
+                  ><button
+                    class="btn ghost small"
+                    data-open-modal="demuth-bermuda"
+                    type="button"
+                  >
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article
+              class="card product-card"
+              data-category="акварель"
+              data-price="3800"
+            >
+              <a
+                class="art-frame"
+                href="#"
+                aria-label="Джон Сингер Сарджент — «Уборка паруса»"
+                ><img
+                  alt="Репродукция картины Джона Сингера Сарджента Уборка паруса"
+                  src="assets/img/gallery/5.jpg"
+              /></a>
+              <div class="card-body">
+                <span class="tag">акварель</span>
+                <h3>Джон Сингер Сарджент — «Уборка паруса»</h3>
+                <p class="muted">Stowing Sail</p>
+                <p>
+                  Репродукция акварели. Сцена с парусниками в тёплых водах
+                  передаёт движение ветра, прозрачность воды и лёгкость морского
+                  дня.
+                </p>
+                <p class="price">3 800 ₽</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap">
+                  <button
+                    class="btn small"
+                    data-add-to-cart="sargent-stowing-sail"
+                    type="button"
+                  >
+                    В корзину</button
+                  ><button
+                    class="btn ghost small"
+                    data-open-modal="sargent-stowing-sail"
+                    type="button"
+                  >
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article
+              class="card product-card"
+              data-category="масло"
+              data-price="5600"
+            >
+              <a
+                class="art-frame"
+                href="#"
+                aria-label="Уильям Брэдфорд — «Берег Лабрадора»"
+                ><img
+                  alt="Репродукция картины Уильяма Брэдфорда Берег Лабрадора"
+                  src="assets/img/gallery/6.jpg"
+              /></a>
+              <div class="card-body">
+                <span class="tag">масло</span>
+                <h3>Уильям Брэдфорд — «Берег Лабрадора»</h3>
+                <p class="muted">The Coast of Labrador</p>
+                <p>
+                  Репродукция на холсте. Холодный северный морской пейзаж с
+                  детальной проработкой света, дальнего берега и спокойной воды.
+                </p>
+                <p class="price">5 600 ₽</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap">
+                  <button
+                    class="btn small"
+                    data-add-to-cart="bradford-labrador"
+                    type="button"
+                  >
+                    В корзину</button
+                  ><button
+                    class="btn ghost small"
+                    data-open-modal="bradford-labrador"
+                    type="button"
+                  >
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <div
+        aria-label="Описание картины"
+        aria-modal="true"
+        class="modal"
+        role="dialog"
+      >
+        <div class="modal-content">
+          <button aria-label="Закрыть" class="modal-close" type="button">
+            ×
+          </button>
+          <img
+            alt=""
+            class="modal-img"
+            src="assets/img/gallery/10.jpg"
+            style="border-radius: 18px; margin-bottom: 18px"
+          />
+          <h2 class="modal-title">Название</h2>
+          <p class="modal-description">
+            Картина доступна для покупки через демонстрационную корзину. После
+            заявки менеджер галереи уточнит способ доставки и оплаты.
+          </p>
+          <p class="price modal-price"></p>
+          <button class="btn modal-add" type="button">
+            Добавить в корзину
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>MareVirtus</h3>
+          <p>
+            Частная галерея морской живописи в Астрахани. Выставки, продажа
+            картин, мастер-классы и лекции о маринистике.
+          </p>
+          <div class="socials">
+            <a aria-label="VK" href="#">VK</a
+            ><a aria-label="Telegram" href="#">TG</a
+            ><a aria-label="YouTube" href="#">YT</a>
+          </div>
+        </div>
+        <div>
+          <h3>Разделы</h3>
+          <a href="gallery.html">Галерея картин</a
+          ><a href="events.html">Мероприятия</a><a href="news.html">Новости</a
+          ><a href="cart.html">Корзина</a>
+        </div>
+        <div>
+          <h3>Партнёры</h3>
+          <a href="about.html#partners">Русский музей</a
+          ><a href="about.html#partners">Музей морского флота</a
+          ><a href="about.html#partners">Частные коллекционеры</a>
+        </div>
+        <div>
+          <h3>Контакты</h3>
+          <p>
+            Астрахань, ул. Пушкина, д. 11<br />+7 (999) 999-99-99<br />info@marevirtus.ru
+          </p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2025 MareVirtus-gallery.ru</span>
+      </div>
+    </footer>
+    <div aria-live="polite" class="chat">
+      <button
+        aria-label="Открыть онлайн-консультацию"
+        class="chat-toggle"
+        type="button"
+      >
+        💬
+      </button>
+      <div class="chat-panel">
+        <div class="chat-header">Онлайн-консультация</div>
+        <div class="chat-messages">
+          <div class="message">
+            Здравствуйте! Я помогу подобрать картину или записаться на
+            мероприятие.
+          </div>
+        </div>
+        <div class="chat-input">
+          <input id="chatInput" placeholder="Ваш вопрос" type="text" /><button
+            id="chatSend"
+            type="button"
+          >
+            OK
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
